@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <title>write</title>
-    <link href="../public/css/font.css" rel="stylesheet" />
-    <link href="../public/css/navbar.css" rel="stylesheet" />
-    <link href="../public/css/sidebar.css" rel="stylesheet" />
-    <link href="../public/css/write.css" rel="stylesheet" />
+    <link href="/css/font.css" rel="stylesheet" />
+    <link href="/css/navbar.css" rel="stylesheet" />
+    <link href="/css/sidebar.css" rel="stylesheet" />
+    <link href="/css/write.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- navbar  -->
     <div id="header">
       <img
-        src="../public/imgs/logo.png"
+        src="../imgs/logo.png"
       />
       <div class="title">어서어선</div>
       <div id="nav">
         <ol class="left-side">
-          <li onClick="location.href='journal_main.html'">일지</li>
-          <li onClick="location.href='community_s.html'">커뮤니티</li>
-          <li onClick="location.href='mypage.html'">마이페이지</li>
+          <li onClick="location.href='/journal'">일지</li>
+          <li onClick="location.href='/community'">커뮤니티</li>
+          <li onClick="location.href='/mypage'">마이페이지</li>
         </ol>
         <ol class="right-side">
-          <li class="login">OOO님</li>
+          <li class="login"><b>OOO님</b></li>
           <li>로그아웃</li>
         </ol>
       </div>
@@ -32,7 +32,7 @@
       <div class="community">글 작성</div>
       <img
         class="headerIMG"
-        src="../public/imgs/header4.PNG"
+        src="/imgs/header4.PNG"
       />
     </div>
 
@@ -40,7 +40,7 @@
       <div class="sidemenu up">
         <details open>
           <summary>후기게시판</summary>
-          <p onClick="location.href='community_s.html'">전라남도</p>
+          <p onClick="location.href='/community'">전라남도</p>
           <p class="selected">전라북도</p>
         </details>
         <p>문의게시판</p>

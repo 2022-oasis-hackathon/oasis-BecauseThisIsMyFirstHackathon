@@ -8,7 +8,28 @@ function clickLoginBTN(event) {
   const memberPassword = document.querySelector('#PW').value;
 
   const loginForm = {memberNumber,memberPassword};
-  console.log(loginForm);
+  // console.log(loginForm);
+
+
+
+  fetch('http://localhost:3000/api/member/login', {
+    headers: {
+      'Content-Type': 'application/json'     
+    },
+    method: 'POST',
+    body: JSON.stringify(loginForm),     //객체 -> JSON
+  }) 
+    .then((response) => response.text())
+    .then((result) => { 
+      // console.log(result);
+      Datas = JSON.parse(result);
+      console.log(Datas);
+      
+      if(Datas.code===200 ){
+        location.href = 'http://localhost:3000/journal';
+      }
+     });
+
 }
 
 loginBTN.addEventListener("click", clickLoginBTN);

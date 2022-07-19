@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <title>journal_checkList</title>
-    <link href="../public/css/font.css" rel="stylesheet" />
-    <link href="../public/css/navbar.css" rel="stylesheet" />
-    <link href="../public/css/sidebar.css" rel="stylesheet" />
-    <link href="../public/css/journal_checkList.css" rel="stylesheet" />
+    <link href="/css/font.css" rel="stylesheet" />
+    <link href="/css/navbar.css" rel="stylesheet" />
+    <link href="/css/sidebar.css" rel="stylesheet" />
+    <link href="/css/journal_checkList.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- navbar  -->
     <div id="header">
-      <img src="../public/imgs/logo.png" />
+      <img src="/imgs/logo.png" />
       <div class="title">어서어선</div>
       <div id="nav">
         <ol class="left-side">
-          <li onClick="location.href='journal_main.html'">일지</li>
-          <li onClick="location.href='community_s.html'">커뮤니티</li>
-          <li onClick="location.href='mypage.html'">마이페이지</li>
+          <li onClick="location.href='/journal'">일지</li>
+          <li onClick="location.href='/community'">커뮤니티</li>
+          <li onClick="location.href='/mypage'">마이페이지</li>
         </ol>
         <ol class="right-side">
-          <li class="login"><strong>OOO님</strong></li>
+          <li class="login"><b>OOO님</b></li>
           <li>로그아웃</li>
         </ol>
       </div>
@@ -29,16 +29,16 @@
 
     <div class="top">
       <div class="community">일지</div>
-      <img class="headerIMG" src="../public/imgs/header2.png" />
+      <img class="headerIMG" src="/imgs/header2.png" />
     </div>
 
     <div class="sidebar">
       <div class="sidemenu">
-        <p onClick="location.href='journal_main.html'">홈</p>
+        <p onClick="location.href='/journal'">홈</p>
         <details open>
           <summary>일지</summary>
-          <p onClick="location.href='journal_add.html'">일지등록</p>
-          <p onClick="location.href='journal_list.html'">일지목록</p>
+          <p onClick="location.href='/journal/add'">일지등록</p>
+          <p onClick="location.href='/journal/list'">일지목록</p>
         </details>
         <p class="selected">점검목록</p>
       </div>
@@ -233,6 +233,6 @@
         </table>
       </div>
     </div>
-    <script src="../public/js/journal_checkList.js"></script>
+    <script src="/js/journal_checkList.js"></script>
   </body>
 </html>

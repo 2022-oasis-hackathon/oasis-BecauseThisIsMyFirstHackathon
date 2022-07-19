@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <Title>journal_main</Title>
-    <link href="../public/css/font.css" rel="stylesheet"/>
-    <link href="../public/css/navbar.css" rel="stylesheet" />
-    <link href="../public/css/sidebar.css" rel="stylesheet" />
+    <link href="/css/font.css" rel="stylesheet"/>
+    <link href="/css/navbar.css" rel="stylesheet" />
+    <link href="/css/sidebar.css" rel="stylesheet" />
   </head>
 
   <body>
 
     <!-- navbar  -->
     <div id="header">
-      <img src="../public/imgs/logo.png"/>
+      <img src="/imgs/logo.png"/>
       <div class="title">어서어선</div>
       <div id="nav">
         <ol class="left-side">
-          <li onClick="location.href='journal_main.html'">일지</li>
-          <li onClick="location.href='community_s.html'">커뮤니티</li>
-          <li onClick="location.href='mypage.html'">마이페이지</li>
+          <li onClick="location.href='/journal'">일지</li>
+          <li onClick="location.href='/community'">커뮤니티</li>
+          <li onClick="location.href='/mypage'">마이페이지</li>
         </ol>
         <ol class="right-side">
-          <li class="login">OOO님</li>
+          <li class="login"><b>OOO님</b></li>
           <li>로그아웃</li>
         </ol>
       </div>
@@ -29,19 +29,19 @@
 
     <div class="top">
       <div class="community">일지</div>
-      <img class="headerIMG" src="../public/imgs/header2.png"/>
+      <img class="headerIMG" src="/imgs/header2.png"/>
     </div>
 
 
     <div class="sidebar">
       <div class="sidemenu">
-        <p class="selected" onClick="location.href='journal_main.html'">홈</p>
+        <p class="selected" onClick="location.href='/journal'">홈</p>
         <details>
           <summary>일지</summary>
-          <p onClick="location.href='journal_add.html'">일지등록</p>
-          <p onClick="location.href='journal_list.html'">일지목록</p>
+          <p onClick="location.href='/journal/add'">일지등록</p>
+          <p onClick="location.href='/journal/list'">일지목록</p>
         </details>
-        <p onClick="location.href='journal_checkList.html'" >점검목록</p>
+        <p onClick="location.href='/journal/checklist'" >점검목록</p>
       </div>
     </div>
 
