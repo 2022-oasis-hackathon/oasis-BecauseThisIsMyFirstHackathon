@@ -37,6 +37,7 @@ td {
 }
 .date {
   width: 381px;
+  cursor: pointer;
 }
 .total {
   display: flex;
@@ -81,4 +82,15 @@ td {
 .show span {
   float: left;
   margin-top: 20px;
+}
+
+/* 삭제, 수정 */
+.tool {
+  width: 80px;
+  /* border: 1px solid red; */
+  float: right;
+}
+.tool img {
+  width: 20px;
+  margin-left: 10px;
 }
