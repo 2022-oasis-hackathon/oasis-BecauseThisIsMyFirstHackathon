@@ -66,8 +66,33 @@ function clickCompleteBTN() {
   const reviewPlace =  document.querySelector(".place").value;
   
 
-  reviewForm = {reviewTitle,reviewContent,reviewCategory,reviewPlace};
+  // reviewForm = {reviewTitle,reviewContent,reviewCategory,reviewPlace};         // 수리소 있는 경우
+  reviewForm = {reviewTitle,reviewContent,reviewCategory}; 
   console.log(reviewForm);
+
+  // fetch 보내기
+
+  fetch('http://localhost:3000/api/review/record', {
+    headers: {
+      'Content-Type': 'application/json'     
+    },
+    method: 'POST',
+    body: JSON.stringify(reviewForm),     //객체 -> JSON
+  }) 
+    .then((response) => response.text())
+    .then((result) => { 
+      // console.log(result);
+      Datas = JSON.parse(result);
+      console.log(Datas);
+      
+      if(Datas.code===200 ){
+        location.href = 'http://localhost:3000/community';
+      }
+    });
+
+
+
+
 }
 
 completeBTN.addEventListener("click", clickCompleteBTN );

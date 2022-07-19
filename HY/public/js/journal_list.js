@@ -117,11 +117,11 @@ function editEach(ID) {
 // 화면에 표 시각화 
 function show() {
   fetch(`http://localhost:3000/api/journal/record`)   
-.then((response) => response.text())
-.then((result) => { 
+  .then((response) => response.text())
+  .then((result) => { 
   Datas = JSON.parse(result);
   // console.log(result);
-  // console.log(Datas);
+  console.log(Datas);
 
   showList(Datas);
   

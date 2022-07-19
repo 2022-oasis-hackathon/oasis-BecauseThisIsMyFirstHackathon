@@ -24,7 +24,8 @@ function clickcomplete() {
       console.log(Datas);
       
       if(Datas.code===200 ){
-        location.href = 'http://localhost:3000/login';
+        // location.href = 'http://localhost:3000/login';
+        window.history.back();
       }
      });
 }
