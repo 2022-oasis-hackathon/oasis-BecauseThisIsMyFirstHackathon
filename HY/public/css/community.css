@@ -6,6 +6,7 @@ td {
 table {
   border-top: 1px solid #444444;
   border-collapse: collapse;
+
 }
 th,
 td {
@@ -32,6 +33,9 @@ h5 {
 td {
   height: 40px;
 }
+
+
+
 .num {
   width: 127px;
 }
@@ -39,6 +43,7 @@ td {
   width: 556px;
   text-align: left;
   padding-left: 13%;
+  cursor: pointer;
 }
 .author {
   width: 165px;
@@ -85,5 +90,12 @@ button {
 }
 .wrap{
   margin-left: 120px;
+}
+
+.tbBox {
+  height: 400px;
+  width: 1040px;
+  overflow: auto;
+  /* border: 1px solid red; */
 }
 
