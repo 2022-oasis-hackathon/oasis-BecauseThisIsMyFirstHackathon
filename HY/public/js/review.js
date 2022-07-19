@@ -63,3 +63,22 @@ function deleteEach(ID){
 
 const deleteBTN = document.querySelector(".delete");
 deleteBTN.addEventListener("click", event=>deleteEach(Id));
+
+
+
+// 수정함수
+function editEach(Id) {
+  location.href = `http://localhost:3000/write?id=${Id}`; 
+}
+
+const editBTN = document.querySelector(".edit");
+editBTN.addEventListener("click", event=>editEach(Id));
+
+
+
+
+
+
+
+
+

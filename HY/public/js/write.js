@@ -1,3 +1,31 @@
+// 수정인 경우
+if(window.location.href!='http://localhost:3000/journal/add'){
+  Id = Number(window.location.search.slice(4))
+
+
+  fetch(`http://localhost:3000/api/review/record/each?id=${Id}`)   
+    .then((response) => response.text())
+    .then((result) => { 
+    Datas = JSON.parse(result);
+    // console.log(result);
+    console.log(Datas);
+
+
+    // 값 채우기
+    document.querySelector("#title").value = Datas.result.reviewTitle;
+
+    let content = Datas.result.reviewContent;
+    content = content.replace("<p>","");
+    content = content.replace("</p>","");
+    content = content.replaceAll("<br />","\n");
+    document.querySelector("#inputbox").value = content;
+
+    document.querySelector(".category").value = Datas.result.reviewCategory;
+      
+  });
+
+}
+
 
 
 const South = ['전남A','전남B','전남C'];
@@ -72,23 +100,49 @@ function clickCompleteBTN() {
 
   // fetch 보내기
 
-  fetch('http://localhost:3000/api/review/record', {
-    headers: {
-      'Content-Type': 'application/json'     
-    },
-    method: 'POST',
-    body: JSON.stringify(reviewForm),     //객체 -> JSON
-  }) 
-    .then((response) => response.text())
-    .then((result) => { 
-      // console.log(result);
-      Datas = JSON.parse(result);
-      console.log(Datas);
-      
-      if(Datas.code===200 ){
-        location.href = 'http://localhost:3000/community';
-      }
-    });
+  if(window.location.href==='http://localhost:3000/journal/add') {       // 추가
+    fetch('http://localhost:3000/api/review/record', {
+      headers: {
+        'Content-Type': 'application/json'     
+      },
+      method: 'POST',
+      body: JSON.stringify(reviewForm),     //객체 -> JSON
+    }) 
+      .then((response) => response.text())
+      .then((result) => { 
+        // console.log(result);
+        Datas = JSON.parse(result);
+        console.log(Datas);
+        
+        if(Datas.code===200 ){
+          location.href = 'http://localhost:3000/community';
+        }
+      });
+  }
+  else{            // 수정
+    reviewId = Number(window.location.search.slice(4));
+    const reviewEditForm = {reviewId, reviewTitle,reviewContent,reviewCategory};
+
+
+    fetch('http://localhost:3000/api/review/record/update', {
+      headers: {
+        'Content-Type': 'application/json'     
+      },
+      method: 'POST',
+      body: JSON.stringify(reviewEditForm),     //객체 -> JSON
+    }) 
+      .then((response) => response.text())
+      .then((result) => { 
+        // console.log(result);
+        Datas = JSON.parse(result);
+        console.log(Datas);
+        
+        if(Datas.code===200 ){
+          location.href = 'http://localhost:3000/community';
+        }
+      });
+  }
+
 
 
 
