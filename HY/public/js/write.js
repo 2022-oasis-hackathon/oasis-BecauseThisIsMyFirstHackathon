@@ -49,10 +49,11 @@ const completeBTN = document.querySelector(".complete");
 function clickCompleteBTN() {
   const reviewTitle = document.querySelector("#title").value;
 
+  // 내용 불러오기
   const txtBox = document.getElementById("inputbox");
   let lines = txtBox.value.split("\n");
  
-  // 내용 불러오기
+
   let reviewContent   = "<p>";
   for (let i = 0; i < lines.length; i++) {
     reviewContent  += lines[i] + "<br />";
