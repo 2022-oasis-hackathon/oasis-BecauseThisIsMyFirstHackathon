@@ -39,9 +39,9 @@
     <div class="sidebar">
       <div class="sidemenu up">
         <details open>
-          <summary>후기게시판</summary>
+          <summary class="selected">후기게시판</summary>
           <p onClick="location.href='/community'">전라남도</p>
-          <p class="selected">전라북도</p>
+          <p>전라북도</p>
         </details>
         <p>문의게시판</p>
         <p>공지사항</p>
@@ -55,17 +55,28 @@
           <p>제목</p>
           <input id="title" type="text"required><br>
 
+          <p>카테고리</p>
+          <!-- <input id="category" type="text"required><br> -->
+          <select class="category input" onchange="categoryChange(this.value)">
+            <option id="s">전라남도</option>
+            <option id="n">전라북도</option>
+          </select>
+
           <p>수리소</p>
-          <input id="place" type="text"required><br>
+          <!-- <input id="place" type="text"required><br> -->
+          <select class="place input">
+
+          </select>
 
           <p>내용</p>
           <div class="input"><textarea id="inputbox" cols="150" rows="20"></textarea></div>
 
 
-          <button type="button">완료</button>
+          <button type="button" class="complete">완료</button>
       </div>
     </div>
 
 
+    <script src="/js/write.js"></script>
   </body>
 </html>

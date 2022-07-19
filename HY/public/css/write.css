@@ -24,12 +24,19 @@
   width: 375px;
   height: 30px;
   margin-left: 100px;
+  
   margin-top: 13px;
   /* clear: both; */
 }
 
 .boxes a{
   clear: both;
+}
+
+.boxes select {
+  display: block;
+  width: 383px;
+  height: 36px;
 }
 
 
