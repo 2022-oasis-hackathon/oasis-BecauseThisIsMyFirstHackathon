@@ -73,6 +73,7 @@ function showEach(ExDatas, ID){
   editIMG.src='/imgs/edit.PNG';
   editIMG.id = temp.id; 
   editIMG.classList.add("edit");
+  editIMG.addEventListener("click", event=>editEach(delIMG.id));
 
   tool.appendChild(editIMG);
   tool.appendChild(delIMG);
@@ -97,15 +98,21 @@ function deleteEach(ID){
     .then((result) => { 
       // console.log(result);
       Datas = JSON.parse(result);
-      console.log("삭제", Datas);
+      // console.log("삭제", Datas);
 
       if(Datas.code===200){
         location.href='http://localhost:3000/journal/list';
       }
      });
-
-
 }
+
+// 아이디 받아서 수정 함수
+function editEach(ID) {
+  console.log("수정",ID);
+  location.href = `http://localhost:3000/journal/add?id=${ID}`; 
+}
+
+
 
 // 화면에 표 시각화 
 function show() {
