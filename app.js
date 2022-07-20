@@ -25,14 +25,14 @@ app.set('port', process.env.PORT || 3000);
 
 
 // view engine setup
-if(process.env.NODE_ENV === "production") {
+// if(process.env.NODE_ENV === "production") {
   app.set('view engine', 'html');
   nunjucks.configure(path.join(__dirname, '/FrontEnd/html'), {
   express: app,
   watch: true
   });
   app.use(express.static(path.join(__dirname, '/FrontEnd/public')));
-}
+// }
 
 const sessionOption = {
   resave: false,
@@ -48,8 +48,8 @@ app.use(session(sessionOption));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.set('views', path.join(__dirname, '/BackEnd/views'));
-app.set('view engine', 'jade');
+// app.set('views', path.join(__dirname, '/BackEnd/views'));
+// app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
