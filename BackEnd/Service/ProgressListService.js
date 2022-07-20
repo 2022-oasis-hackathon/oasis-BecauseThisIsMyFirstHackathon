@@ -58,9 +58,9 @@ const Get = {
         let pl = await UserProgressList.findAndCountAll({where : {MemberId : userObj.id}})
         let tempObj = Inner.range(totalHour, pl)
         let i = 0;
-        let result = {}
+        let result = []
         tempObj.pl.forEach(element => {
-            if(element) {
+            if(element != null) {
                 result[i] = {}
                 result[i]["id"] = pl.rows[i].id
                 result[i]["UPLName"] = pl.rows[i].UPLName
