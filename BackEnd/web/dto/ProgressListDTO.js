@@ -6,9 +6,9 @@ let get = function(req, res, next) {
 }
 
 let post = function (req, res, next) {
-    const { PLName, PLExplain, PL100, PL300, PL500, checkDate } = req.body
+    const { PLName, PLExplain, PL100, PL300, PL500, checkDate, checkList } = req.body
     let Obj = {
-        PLName, PL100, PL300, PL500,
+        PLName, PL100, PL300, PL500, checkList,
         userObj : req.user
     }
     return Obj
