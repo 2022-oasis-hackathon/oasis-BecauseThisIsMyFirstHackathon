@@ -1,4 +1,35 @@
 
+// 수정인 경우 미리 채우기
+if(window.location.href !='http://localhost:3000/journal/add') {
+
+  Id = Number(window.location.search.slice(4));
+  console.log(Id);
+
+  fetch(`http://localhost:3000/api/journal/record/each?id=${Id}`)   
+    .then((response) => response.text())
+    .then((result) => { 
+    Datas = JSON.parse(result);
+    // console.log(result);
+    console.log(Datas);
+
+    // 값 채우기
+    document.querySelector("#date").value = Datas.result.journalDate;
+    document.querySelector("#time").value = Datas.result.journalHours;
+
+    let content = Datas.result.journalEtc;
+    content = content.replace("<p>","");
+    content = content.replace("</p>","");
+    content = content.replaceAll("<br />","\n");
+    document.querySelector("#inputbox").value = content;
+      
+  });
+
+}
+
+
+
+
+
 
 // 완료 버튼
 let journalForm;
