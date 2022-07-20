@@ -11,3 +11,38 @@ function goEdit() {
 }
 
 editPW.addEventListener("click", goEdit);
+
+
+// 값 미리 넣기
+
+fetch(`http://localhost:3000/api/member/infoGet`)   
+  .then((response) => response.text())
+  .then((result) => { 
+  Datas = JSON.parse(result);
+  // console.log(result);
+  console.log(Datas);
+
+  document.querySelector("#name").value = Datas.result.memberName;
+  document.querySelector("#pNumber").value = `0${Datas.result.memberNumber}`;
+});
+
+
+// 탈퇴 버튼
+
+const BTN = document.querySelector(".delete");
+function click() {
+  fetch(`http://localhost:3000/api/member/witdrawal`)   
+  .then((response) => response.text())
+  .then((result) => { 
+  Datas = JSON.parse(result);
+  // console.log(result);
+  console.log(Datas);
+  
+  location.href = '/';
+  });
+}
+
+BTN.addEventListener("click",click);
+
+
+

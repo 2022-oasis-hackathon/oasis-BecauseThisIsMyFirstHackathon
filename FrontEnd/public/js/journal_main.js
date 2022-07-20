@@ -101,7 +101,7 @@ function loadYYMM(fullDate) {
           yy + "." + init.addZero(mm + 1) + "." + init.addZero(countDay + 1);
         trtd += '<td class="day';
         trtd += markToday && markToday === countDay + 1 ? ' today" ' : '"';
-        trtd += ` data-date="${countDay + 1}" data-fdate="${fullDate}">`;
+        trtd += ` data-date="${countDay + 1}" id="${fullDate}">`;
       }
       trtd += startCount ? ++countDay : "";
       if (countDay === lastDay.getDate()) {
@@ -113,6 +113,8 @@ function loadYYMM(fullDate) {
   }
   $calBody.innerHTML = trtd;
 }
+
+let MyDate = '2022.07.13';
 
 /**
  * @param {string} val
@@ -148,9 +150,87 @@ $calBody.addEventListener("click", (e) => {
     }
     let day = Number(e.target.textContent);
     loadDate(day, e.target.cellIndex);
+
+    // console.log("월화수목금",npe.target.cellIndex);
+
     e.target.classList.add("day-active");
     init.activeDTag = e.target;
-    init.activeDate.setDate(day);
-    reloadTodo();
+
+    init.activeDate.setDate("월화수목금",day);
+
+    // console.log("날짜",day);
+    // console.log($calBody.querySelector(`.day[data-date]`));
+    // console.log(`.day[data-date]`);
+
+
+    // 날짜
+    // MyDate = e.target;
+    // console.log(a.id);
+    console.log(e.target.id);
+    if(e.target.id===MyDate){
+      console.log("날짜가 같아요");
+    }
+
+    
+
+
   }
 });
+
+function showCalender(){
+  fetch(`http://localhost:3000/api/journal/record`)   
+  .then((response) => response.text())
+  .then((result) => { 
+  Datas = JSON.parse(result);
+  // console.log(result);
+  // console.log(Datas);
+
+
+  showDate(Datas);
+
+});
+}
+
+// 새로고침하면 보이게
+showCalender();
+
+document.querySelector(".prev").addEventListener("click",showCalender);
+document.querySelector(".next").addEventListener("click",showCalender);
+
+let myDate = getArr();
+console.log(myDate);
+
+const testArr = ['2022.07.01','2022.07.10','2022.07.25'];
+
+
+// 달력에 항해 날 표시하기
+
+function showDate(exDatas) {
+  const parent = document.querySelector(".cal-body");
+  const pCount = parent.childElementCount;
+  
+  for (let i = 0;i<pCount;i++){
+    let child1 = parent.childNodes[i];
+    let childCount = parent.childNodes[i].childElementCount;
+  
+  
+    for(let j=0;j<childCount;j++){
+      let dateID = child1.childNodes[j].id;
+  
+  
+      for(let c=0;c<exDatas.result.length;c++){
+  
+        if(exDatas.result[c].journalDate.replaceAll('-','.') ===dateID){
+          child1.childNodes[j].classList.add("day-active");
+        }
+      }  
+    }
+  }
+}
+
+
+
+
+
+
+

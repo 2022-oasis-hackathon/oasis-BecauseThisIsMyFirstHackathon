@@ -21,7 +21,7 @@
           <li onClick="location.href='/mypage'">마이페이지</li>
         </ol>
         <ol class="right-side">
-          <li class="login"><b>OOO님</b></li>
+          <li class="login"><b id="myname">OOO님</b></li>
           <li>로그아웃</li>
         </ol>
       </div>
@@ -77,7 +77,70 @@
         <!-- // .my-calendar -->
       </div>
       <!-- 내용은 여기에 추가하면 됨 -->
+
+      <div class="Box">
+        <div class="weather">
+
+          <div id="weather">
+            <img src="/imgs/sun.PNG">
+
+            <div class="box">
+              <p>지역</p>
+              <span id="place"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="box">
+              <p>날씨</p>
+              <span id="wea"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="box">
+              <p>온도</p>
+              <span id="temp"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="box">
+              <p>습도</p>
+              <span id="hum"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="box">
+              <p>해수면</p>
+              <span id="sea"></span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="box">
+              <p>풍속</p>
+              <span id="wind"></span>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+
     </div>
+
+    <script src="/js/weather.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/logout.js"></script>
     <script src="/js/journal_main.js"></script>
   </body>
 </html>
