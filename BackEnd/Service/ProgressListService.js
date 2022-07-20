@@ -32,7 +32,7 @@ const Post = {
             checkList.map(res =>            
             sequelize.query(`UPDATE userprogresslist
             SET  U${tempObj.plTime} = 0
-            WHERE MemberId = ${userObj.id} AND Id = ${res};`))
+            WHERE MemberId = ${userObj.id} AND id = ${res};`))
         )
         let result = {code : 200, upadateObj}
         return result
