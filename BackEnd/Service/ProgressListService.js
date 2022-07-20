@@ -5,7 +5,9 @@ const { sequelize } = require("../../DB/sequelize/models");
 
 const Post = {
     pl : async function(PLDTO, res, next) {
-        const { PLName, PL100, PL300, PL500, userObj, checkDate } = PLDTO
+        const { PLName, PL100, PL300, PL500, userObj, checkDate, checkList } = PLDTO
+        console.log(PLDTO)
+        console.log(checkList)
         let journalObj = await Journal.findAndCountAll({where : 
         { 
             [Op.or]: [
@@ -26,10 +28,12 @@ const Post = {
         let totalHour = hour
         let pl = await UserProgressList.findAndCountAll()
         let tempObj = Inner.range(totalHour, pl)
-        let query = `UPDATE userprogresslist
-        SET  U${tempObj.plTime} = 0
-        WHERE MemberId = ${userObj.id};`
-        let upadateObj = await sequelize.query(query)
+        let upadateObj = await Promise.all(
+            checkList.map(res =>            
+            sequelize.query(`UPDATE userprogresslist
+            SET  U${tempObj.plTime} = 0
+            WHERE MemberId = ${userObj.id} AND Id = ${res};`))
+        )
         let result = {code : 200, upadateObj}
         return result
     },
