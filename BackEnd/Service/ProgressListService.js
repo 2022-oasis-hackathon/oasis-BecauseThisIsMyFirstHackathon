@@ -61,7 +61,10 @@ const Get = {
         let result = {}
         tempObj.pl.forEach(element => {
             if(element) {
-                result[i] = pl.rows[i].UPLName
+                result[i] = {}
+                result[i]["id"] = pl.rows[i].id
+                result[i]["UPLName"] = pl.rows[i].UPLName
+                result[i]["UPLExplain"] = pl.rows[i].UPLExplain
             }
             i++
         });
