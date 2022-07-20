@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>review</title>
+    <link href="/css/font.css" rel="stylesheet" />
+    <link href="/css/navbar.css" rel="stylesheet" />
+    <link href="/css/sidebar.css" rel="stylesheet" />
+    <link href="/css/review.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- navbar  -->
+    <div id="header">
+      <img
+        src="../imgs/logo.png"
+      />
+      <div class="title">어서어선</div>
+      <div id="nav">
+        <ol class="left-side">
+          <li onClick="location.href='/journal'">일지</li>
+          <li onClick="location.href='/community'">커뮤니티</li>
+          <li onClick="location.href='/mypage'">마이페이지</li>
+        </ol>
+        <ol class="right-side">
+          <li class="login"><b>OOO님</b></li>
+          <li class="logout">로그아웃</li>
+        </ol>
+      </div>
+    </div>
+    <div class="top">
+      <div class="community">글 확인</div>
+      <img
+        class="headerIMG"
+        src="/imgs/header4.PNG"
+      />
+    </div>
+
+    <div class="sidebar">
+      <div class="sidemenu up">
+        <details open>
+          <summary class="selected">후기게시판</summary>
+          <p onClick="location.href='/community'">전라남도</p>
+          <p>전라북도</p>
+        </details>
+        <p>문의게시판</p>
+        <p>공지사항</p>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <div class="box1">
+        <div class="titlebox">
+          <p>제목</p>
+          <span id="title"></span>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="regionBox">
+          <p>지역</p>
+          <span id="region"></span>
+        </div>
+
+        <div class="clear"></div>
+      
+        <div class="placeBox">
+          <p>수리소</p>
+          <span id="place"></span>
+        </div>
+
+      </div>
+
+
+
+      <div class="box2">
+
+        <div class="authorBox">
+          <p>작성자</p>
+          <span id="author"></span>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="dateBox">
+          <p>작성일</p>
+          <span id="date"></span>
+        </div>
+
+        <div class="clear"></div>
+
+      </div>
+
+
+
+      <div class="box3">
+        <div class="tool">
+          <img class=edit src="/imgs/edit.PNG">
+          <img class="delete" src="/imgs/delete.PNG">
+        </div>
+        <span id="etc"></span>
+      </div>
+
+
+    </div>
+
+
+    <script src="/js/logout.js"></script>
+    <script src="/js/review.js"></script>
+  </body>
+</html>

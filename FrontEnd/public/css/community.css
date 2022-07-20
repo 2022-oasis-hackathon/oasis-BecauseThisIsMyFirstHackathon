@@ -1,0 +1,101 @@
+table,
+th,
+td {
+  text-align: center;
+}
+table {
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+
+}
+th,
+td {
+  border-bottom: 1px solid #444444;
+}
+tr:nth-child(1) {
+  border-top: 3px solid #444444;
+}
+tr:nth-child(2) {
+  border-top: 2px solid #444444;
+}
+tr:last-child {
+  border-bottom: 3px solid #444444;
+}
+figcaption {
+  display: flex;
+  flex-direction: row;
+}
+h5 {
+  margin-left: 0.5%;
+  margin-top: 2.6%;
+  color: #757575;
+}
+td {
+  height: 40px;
+}
+
+
+
+.num {
+  width: 127px;
+}
+.table-title {
+  width: 556px;
+  text-align: left;
+  padding-left: 13%;
+  cursor: pointer;
+}
+.author {
+  width: 165px;
+}
+.count {
+  width: 165px;
+}
+.arrow {
+  display: inline-block;
+  width: 15vw;
+  margin-left: 35%;
+}
+.arrow img {
+  width: 6%;
+}
+.number {
+  font-size: 24px;
+  padding-left: 8%;
+  padding-right: 8%;
+  color: #0f4c81;
+}
+button {
+  width: 8vw;
+  height: 5vh;
+  background: #ffffff;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 1px solid rgba(15, 76, 129, 0.47);
+  border-radius: 26px;
+  font-size: 15px;
+  margin-left: 170%;
+}
+.bottom {
+  margin-top: 1.5%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+}
+.content {
+  height: 800px;
+  height: 800px;
+  margin-top: 2%;
+    /* background-color: #a0caa1; */
+}
+.wrap{
+  margin-left: 120px;
+}
+
+.tbBox {
+  height: 400px;
+  width: 1040px;
+  overflow: auto;
+  /* border: 1px solid red; */
+}
+

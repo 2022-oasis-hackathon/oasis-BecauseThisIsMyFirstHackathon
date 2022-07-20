@@ -1,0 +1,54 @@
+#header {
+  position: absolute;
+  z-index: 1;
+  margin: 3%;
+  margin-top: 1%;
+  font-family: Pretendard_Medium;
+  /* position: fixed; */
+}
+#header .title {
+  color: black;
+  display: inline;
+  vertical-align: super;
+  margin-left: 0.5%;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+#header img,
+summary,
+p {
+  cursor: pointer;
+}
+#header .left-side {
+  display: inline;
+  padding: 1%;
+  text-align: end;
+  vertical-align: super;
+}
+#header .right-side {
+  display: inline;
+  float: right;
+  width: 71vw;
+  text-align: end;
+  margin-top: -2%;
+}
+#header #nav {
+  display: inline;
+}
+
+#header .login {
+  padding-right: 1%;
+}
+#header li {
+  color: black;
+  list-style: none;
+  display: inline;
+  padding: 0.5%;
+  padding: 0.5%;
+  cursor: pointer;
+  
+}
+body{
+  margin:0;
+}

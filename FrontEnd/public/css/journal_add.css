@@ -1,0 +1,30 @@
+
+.content {
+  margin-top: 40px;
+  margin-left: 300px;
+  font-family: Pretendard_Light;
+}
+
+.content b{
+  color: #0F4C81;
+}
+
+.content input {
+  width: 375px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.content button {
+  font-family: Pretendard_Light;
+  width: 5vw;
+  height: 5vh;
+  background: #ffffff;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 1px solid rgba(15, 76, 129, 0.47);
+  border-radius: 26px;
+  font-size: 15px;
+  margin-left: 310px;
+  margin-top: 20px;
+}
