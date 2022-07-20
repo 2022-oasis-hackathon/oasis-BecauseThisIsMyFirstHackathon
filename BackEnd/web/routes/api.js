@@ -48,6 +48,9 @@ router.get('/member/witdrawal', async function(req, res, next){
     memberService.Withdrawal(req, res, next)
 })
 
+router.get('/member/infoGet', async function(req, res, next){
+    memberService.InfoGet(req, res, next)
+})
 
 // reviewService
 router.post('/review/record', memberService.isLoggedIn, async function (req, res, next) {
