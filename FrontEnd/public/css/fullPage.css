@@ -54,21 +54,21 @@ body {
 }
 .panel:nth-child(1) img {
   max-width: 100%;
-  margin-top: -26vh;
+  margin-top: -10vh;
 }
 .panel:nth-child(2) {
   padding: 0%;
 }
 .panel:nth-child(2) img {
   max-width: 100%;
-  margin-top: 1vh;
+  margin-top: -9vh;
 }
 .panel:nth-child(3) {
   padding: 0%;
 }
 .panel:nth-child(3) img {
   max-width: 100%;
-  margin-top: 2vh;
+  margin-top: 0vh;
 }
 .info-3 {
   position: absolute;

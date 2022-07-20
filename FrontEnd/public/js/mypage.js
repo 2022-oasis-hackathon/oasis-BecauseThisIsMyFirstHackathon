@@ -23,7 +23,7 @@ fetch(`http://localhost:3000/api/member/infoGet`)
   console.log(Datas);
 
   document.querySelector("#name").value = Datas.result.memberName;
-  document.querySelector("#pNumber").value = `0${Datas.result.memberNumber}`;
+  document.querySelector("#pNumber").value = `${Datas.result.memberNumber}`;
 });
 
 
