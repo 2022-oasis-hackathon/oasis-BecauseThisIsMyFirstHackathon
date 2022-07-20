@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <Title>register</Title>
+    <link href="/css/font.css" rel="stylesheet"/>
+    <link href="/css/register.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+
+    <div class="one">
+      <p>회원가입</p>
+      <img src="/imgs/ship.jpg">
+    </div>
+    
+    <form class="registerForm">
+      <input id="Name" type="text" placeholder="이름" required><br>
+      <input id="PW" type="text" placeholder="비밀번호" required><br>
+    </form>
+
+    <div class="box">
+
+      <div class="pNumber">
+        <input id="pNumber" type="text" placeholder="전화번호" required><br>
+      </div>
+
+      <div class="check">
+        <button class="checkBTN">인증번호 받기</button>
+      </div>
+
+      <div class="clear"></div>
+
+      <input id="checkNum" type="text" placeholder="인증번호 입력" required disabled><br>
+      <button class="registerBTN">회원가입</button>
+    </div>
+
+
+    
+    <script src="/js/register.js"></script>
+  </body>
+</html>

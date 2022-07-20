@@ -1,0 +1,95 @@
+
+/* 헤더이미지  */
+.headerIMG {
+  height: 230px;
+  width: 100%;
+  /* position: fixed; */
+}
+
+/* 사이드바 */
+.sidebar {
+  margin-right: 20px;
+  margin-top: 0;
+  width: 200px;
+  /* border-right: 1px solid red; */
+  height: 69vh;
+  float: left;
+  font-family: Pretendard_Medium;
+}
+
+.sidemenu {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 40px;
+  padding: 0;
+  width: 140px;
+  /* height: 516px; */
+
+}
+.sidemenu p {
+  display: block;
+  color: #000;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+/* 일지  */
+details summary::marker{
+  font-size:0;
+}
+
+details summary{
+  padding-left: 20px;
+}
+
+details p {
+  /* background-color: #a0caa1; */
+  margin-left: 20px;
+  display: block;
+  width: 70px;
+  font-size: 13px;
+}
+
+/* 사이드바 메뉴 클릭 */
+.selected {
+  color: #0F4C81;
+  border-bottom: 2px solid #0F4C81;
+}
+
+.up {
+  margin-top: 60px;
+}
+.top {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.community {
+  position: absolute;
+
+  color: #ffffff;
+  font-size: 330%;
+}
+
+
+
+/* 내용 */
+.content {
+  width: 80%;
+  height: 500px;
+  margin-left: 220px;
+  /* background-color: #a0caa1; */
+}
+
+
+
+
+
+
+
+
+
+

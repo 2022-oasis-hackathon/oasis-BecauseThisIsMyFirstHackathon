@@ -1,0 +1,116 @@
+/*x테이블 설정*/
+table,
+th,
+td {
+  text-align: center;
+}
+table {
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid #444444;
+}
+tr:nth-child(1) {
+  border-top: 3px solid #444444;
+}
+tr:nth-child(2) {
+  border-top: 2px solid #444444;
+}
+tr:last-child {
+  border-bottom: 3px solid #444444;
+}
+td {
+  height: 40px;
+}
+#name {
+  width: 400px;
+}
+.name {
+  padding-left: 3%;
+  text-align: left;
+  width: 450px;
+  height: 55px;
+}
+#method {
+  width: 380px;
+}
+.method {
+  text-align: center;
+}
+
+.date {
+  width: 102px;
+}
+.check {
+  width: 150px;
+}
+.check-box {
+  display: flex;
+  justify-content: center;
+}
+.check input {
+  zoom: 1.5;
+}
+.percent {
+  font-size: 18px;
+  margin-bottom: 0.5%;
+}
+.content {
+  height: 800px;
+  margin-left: 26%;
+  margin-top: 3%;
+  width: 70%;
+}
+
+.date-submit {
+  display: flex;
+  justify-content: center;
+  margin-left: 55%;
+  flex-direction: row;
+  margin-top: 2%;
+}
+.date {
+  margin-right: 5%;
+}
+.bar {
+  width: 40%;
+}
+.one-hundred {
+  width: 100%;
+  height: 25px;
+  background-color: #dddddd;
+  border-radius: 20px;
+}
+.progress {
+  height: 25px;
+  background-color: #0f4c81;
+  border-radius: 20px;
+}
+.time-bar {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin-bottom: 1%;
+}
+
+.number {
+  color: #000000;
+  font-size: 18px;
+}
+.submit input {
+  margin-left: 35%;
+  width: 4vw;
+  height: 5vh;
+  border: 1px solid rgba(15, 76, 129, 0.47);
+  border-radius: 26px;
+  cursor: pointer;
+}
+#date-input {
+  height: 4.5vh;
+  border-radius: 26px;
+  border: 1px solid rgba(15, 76, 129, 0.47);
+  width: 8vw;
+  text-align: center;
+}

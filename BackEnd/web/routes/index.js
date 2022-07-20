@@ -2,9 +2,6 @@ var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-var express = require("express");
-var router = express.Router();
-
 router.get("/community", function (req, res, next) {
   res.render("community_s");
 });
@@ -58,5 +55,4 @@ router.get("/review", function (req, res, next) {
 });
 
 
-module.exports = router;
 module.exports = router;

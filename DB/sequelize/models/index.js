@@ -57,14 +57,14 @@ UserProgressList.associate(db)
 // RepairShipList.create({RSName, RSRegion, RSNumber, RSAdress})
 
 
-ProgressList.create({PLName : "애노우드", PLExplain : "필요 시 점검 및 교환", PL100 : 1, PL300 : 0, PL500 : 0})
-UserProgressList.create({UPLName : "애노우드", UPLExplain : "필요 시 점검 및 교환", UPL100 :  1, UPL300 : 0, UPL500 : 0, MemberId : 1})
-RepairShipList.create({RSName : "동양FRP", RSRegion : "전라남도", RSNumber : "010-6661-8370", RSAdress : "전남 여수시 국동 25∼40 37-319"})
+// ProgressList.create({PLName : "애노우드", PLExplain : "필요 시 점검 및 교환", PL100 : 1, PL300 : 0, PL500 : 0})
+// UserProgressList.create({UPLName : "애노우드", UPLExplain : "필요 시 점검 및 교환", UPL100 :  1, UPL300 : 0, UPL500 : 0, MemberId : 1})
+// RepairShipList.create({RSName : "동양FRP", RSRegion : "전라남도", RSNumber : "010-6661-8370", RSAdress : "전남 여수시 국동 25∼40 37-319"})
 
 
-ProgressList.create({PLName : "애노우드(실린더 헤드 배기관)", PLExplain : "필요 시 점검 및 교환", PL100 : 1, PL300 : 0, PL500 : 0})
-UserProgressList.create({UPLName : "애노우드(실린더 헤드 배기관)", UPLExplain : "필요 시 점검 및 교환", UPL100 :  1, UPL300 : 0, UPL500 : 0, MemberId : 1})
-RepairShipList.create({RSName : "종합전기", RSRegion : "전라남도", RSNumber : "061-553-5992", RSAdress : "전남 완도군 완도읍 군내리 310"})
+// ProgressList.create({PLName : "애노우드(실린더 헤드 배기관)", PLExplain : "필요 시 점검 및 교환", PL100 : 1, PL300 : 0, PL500 : 0})
+// UserProgressList.create({UPLName : "애노우드(실린더 헤드 배기관)", UPLExplain : "필요 시 점검 및 교환", UPL100 :  1, UPL300 : 0, UPL500 : 0, MemberId : 1})
+// RepairShipList.create({RSName : "종합전기", RSRegion : "전라남도", RSNumber : "061-553-5992", RSAdress : "전남 완도군 완도읍 군내리 310"})
 
 
 module.exports = db;

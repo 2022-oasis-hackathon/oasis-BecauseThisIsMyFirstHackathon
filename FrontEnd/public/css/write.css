@@ -1,0 +1,55 @@
+
+.clear {
+  clear: both;
+}
+
+.content {
+  margin-top: 30px;
+  margin-left: 250px;
+  /* background-color: antiquewhite; */
+}
+
+
+.boxes p {
+  font-family: Pretendard_Light;
+  font-size: 18px;
+  float: left;
+  width: 70px;
+  position: absolute;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.boxes input, .input {
+  width: 375px;
+  height: 30px;
+  margin-left: 100px;
+  
+  margin-top: 13px;
+  /* clear: both; */
+}
+
+.boxes a{
+  clear: both;
+}
+
+.boxes select {
+  display: block;
+  width: 383px;
+  height: 36px;
+}
+
+
+.boxes button {
+  font-family: Pretendard_Light;
+  width: 5vw;
+  height: 5vh;
+  background: #ffffff;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 1px solid rgba(15, 76, 129, 0.47);
+  border-radius: 26px;
+  font-size: 15px;
+  margin-left: 1120px;
+  margin-top: 280px;
+}
