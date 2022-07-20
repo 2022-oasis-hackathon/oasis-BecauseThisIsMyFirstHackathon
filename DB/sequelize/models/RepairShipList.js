@@ -20,7 +20,7 @@ module.exports = class RepairShipList extends Sequelize.Model {
         unique: false,
       },
       RSNumber: {
-        type: DataTypes.INTEGER(100),
+        type: DataTypes.STRING(100),
         allowNull: true,
         unique: false,
       },
