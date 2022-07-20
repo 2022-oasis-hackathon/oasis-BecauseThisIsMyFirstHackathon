@@ -107,12 +107,12 @@ const Withdrawal = async (req, res, next)  => {
   return res.send(result)
 }
 
-const Info = async (req, res, next) => {
+const Info = (req, res, next) => {
   let info = {code : 200, result : req.user}
   return info 
 }
 
-const InfoGet = async (req, res, next) => {
+const InfoGet = (req, res, next) => {
   let result = Info(req,res,next)
   return res.send(result)
 }
