@@ -1,0 +1,85 @@
+/* 이미지 */
+.one {
+  width: 550px;
+  height: 55px;
+  /* border: 1px solid red; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10px;
+}
+
+.one p{
+  font-family: Pretendard_Regular;
+  font-size: 23px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  position: absolute;
+}
+
+.one img {
+  width: 60px;
+  float: right;
+}
+
+/* 전화번호 */
+.box {
+  width: 556px;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pNumber {
+  float: left;
+  margin-right: 30px;
+}
+
+.pNumber input {
+  width: 380px;
+  height: 40px;
+  padding-left: 20px;
+  color: #9D9D9D;
+}
+
+#checkNum, #newPW {
+  width: 530px;
+  height: 40px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.checkBTN {
+  width: 120px;
+  height: 46px;
+  margin: 0px;
+  background-color: #0F4C81;
+  color: white;
+  border: none;
+  font-family: Pretendard_Bold;
+  cursor: pointer;
+}
+
+.registerBTN, .complete {
+  width: 556px;
+  height: 46px;
+  margin-top: 20px;
+  background-color: #0F4C81;
+  color: white;
+  border: none;
+  font-family: Pretendard_Bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#newPW {
+  margin-top: 40px;
+}
+
+.checkBTN:hover, .registerBTN:hover,  .complete:hover {
+  background-color: #BDE3FF;
+  color: black;
+}
