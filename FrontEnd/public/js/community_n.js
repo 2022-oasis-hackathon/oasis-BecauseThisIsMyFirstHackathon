@@ -32,6 +32,8 @@ for(let i=0;i<count;i++){
   const td2 = document.createElement('td');
   td2.innerHTML = exDatas.result[i].reviewTitle;
   td2.classList.add('table-title');
+  td2.id = exDatas.result[i].id;
+  td2.addEventListener("click",event =>goDetail(td2.id));
 
   const td3 = document.createElement('td');
   td3.innerHTML = exDatas.result[i].reviewAuthor;
@@ -55,6 +57,11 @@ for(let i=0;i<count;i++){
 
 }
 
+
+// 제목 클릭하면 글 확인 페이지로 이동
+function goDetail(ID){
+location.href=`http://localhost:3000/review?id=${ID}`;
+}
 
 
 
