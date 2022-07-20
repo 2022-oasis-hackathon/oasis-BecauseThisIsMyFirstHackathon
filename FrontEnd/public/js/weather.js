@@ -10,7 +10,7 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-        document.querySelector("#place").innerText = data.name;
+        // document.querySelector("#place").innerText = data.name;
         document.querySelector("#wea").innerText = `${data.weather[0].description}`;
         document.querySelector("#temp").innerText = `${data.main.temp}℃`;
         document.querySelector("#hum").innerText = `${data.main.humidity}%`;
